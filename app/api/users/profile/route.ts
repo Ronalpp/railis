@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
-import { hash, compare } from "bcrypt"
+import { hash, compare } from "bcryptjs"
 
 export async function PATCH(request: Request) {
   const session = await getServerSession(authOptions)
